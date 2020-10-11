@@ -1,19 +1,24 @@
 public class Food {
     private double weight;
-    public boolean taste;
+    private boolean taste;
     private float protein;
     private float fat;
+    static double meal;
 
-  public static void main(double meal){
-      Food animal = new Food();
-      animal.setWeight(10.4);
-      animal.setFat(5);
-      animal.setProtein((float) 2.3);
-      meal = animal.getFat() + animal.getProtein() + animal.getWeight();
+  public static void main(){
+      Food food = new Food();
+      food.setWeight(10.4);
+      food.setFat(5);
+      food.setProtein((float) 2.3);
+      meal = food.getFat() + food.getProtein() + food.getWeight();
   }
 
     public boolean isTaste() {
         return taste;
+    }
+
+    public void setTaste(boolean taste) {
+        this.taste = taste;
     }
 
     public double getWeight() {
@@ -39,4 +44,5 @@ public class Food {
     public void setFat(float fat) {
         this.fat = fat;
     }
+
 }

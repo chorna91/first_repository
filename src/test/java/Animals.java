@@ -1,6 +1,6 @@
 public class Animals {
     private int age;
-    public double weight;
+    private double weight;
     private boolean gender;
     private String family;
     private float speed;
@@ -23,6 +23,8 @@ public class Animals {
 
     public void setWeight(double value){ weight = value; }
 
+    public double getWeight() { return weight; }
+
     public static void sleep() {
         Animals sleepAnimal = new Animals();
         sleepAnimal.setSpeed(0);
@@ -38,7 +40,7 @@ public class Animals {
         this.frequency = frequency;
     }
 
-    public boolean getWatch() {
+    public boolean isWatch() {
         return watch;
     }
 
@@ -70,5 +72,6 @@ public class Animals {
     public void setSpeed(float speed) {
         this.speed = speed;
     }
+
 }
 
