@@ -4,12 +4,22 @@ public class Food {
     private float protein;
     private float fat;
 
-  public static void main(){
+    public Food(double weight, float protein, float fat) {
+        this.weight = weight;
+        this.protein = protein;
+        this.fat = fat;
+    }
+    public Food() {
+    }
+
+    public static void main(String[] args){
       Food food = new Food();
       food.setWeight(10.4);
       food.setFat(5);
       food.setProtein((float) 2.3);
+      Food food2 = new Food(1, 2, 3);
       System.out.println(food.getProductInformation());
+      System.out.println(food2.getProductInformation());
   }
 
   public String getProductInformation(){
