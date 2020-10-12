@@ -3,14 +3,17 @@ public class Food {
     private boolean taste;
     private float protein;
     private float fat;
-    static double meal;
 
   public static void main(){
       Food food = new Food();
       food.setWeight(10.4);
       food.setFat(5);
       food.setProtein((float) 2.3);
-      meal = food.getFat() + food.getProtein() + food.getWeight();
+      System.out.println(food.getProductInformation());
+  }
+
+  public String getProductInformation(){
+      return "Fat level - "+ Float.toString(getFat()) +"\n"+ "Protein level - "+ Float.toString(getProtein()) +"\n"+ "Weight level - "+ Double.toString(getWeight());
   }
 
     public boolean isTaste() {

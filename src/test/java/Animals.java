@@ -25,18 +25,17 @@ public class Animals {
 
     public double getWeight() { return weight; }
 
-    public static void sleep() {
-        Animals sleepAnimal = new Animals();
-        sleepAnimal.setSpeed(0);
-        sleepAnimal.setFrequency((byte) 40);
-        sleepAnimal.setWatch(false);
+    public void sleep() {
+        setSpeed(0);
+        setFrequency((byte) 40);
+        setWatch(false);
     }
 
     public byte getFrequency() {
         return frequency;
     }
 
-    protected void setFrequency(byte frequency) {
+    public void setFrequency(byte frequency) {
         this.frequency = frequency;
     }
 
@@ -74,4 +73,3 @@ public class Animals {
     }
 
 }
-
