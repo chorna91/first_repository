@@ -1,10 +1,11 @@
 public class PetShop {
-    private Animals Animal;
-    private Food Food;
+    private Animal myAnimal;
+    private Food myFood;
+
     public static void main(String[] args) {
-   PetShop moskowSquareShop = new PetShop();
-   moskowSquareShop.Food.setWeight(23);
-   moskowSquareShop.Animal.setAge(5);
+        PetShop moskowSquareShop = new PetShop();
+        moskowSquareShop.myFood.setWeight(23);
+        moskowSquareShop.myAnimal.setGender(true);
 
     }
 }

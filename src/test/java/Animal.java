@@ -1,35 +1,9 @@
-public class Animals {
-    private int age;
-    private double weight;
+class Animal{
     private boolean gender;
     private String family;
     private float speed;
     private byte frequency;
     private boolean watch;
-
-    public static void main(String[] args) {
-        Animals myAnimal1 = new Animals();
-        myAnimal1.setAge(5);
-        System.out.println("my animal age is "+ myAnimal1.getAge());
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    protected void setAge(int age) {
-        this.age = age;
-    }
-
-    public void setWeight(double value){ weight = value; }
-
-    public double getWeight() { return weight; }
-
-    public void sleep() {
-        setSpeed(0);
-        setFrequency((byte) 40);
-        setWatch(false);
-    }
 
     public byte getFrequency() {
         return frequency;
@@ -37,6 +11,21 @@ public class Animals {
 
     public void setFrequency(byte frequency) {
         this.frequency = frequency;
+    }
+
+    public static void main(String[] args){
+        Animal myAnimal1 = new Animal();
+        myAnimal1.play();
+    }
+
+    public void play() {
+        System.out.println("Играть");
+    }
+
+    public void sleep() {
+        setSpeed(0);
+        setFrequency((byte) 1);
+        setWatch(false);
     }
 
     public boolean isWatch() {
