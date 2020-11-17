@@ -16,4 +16,14 @@ public class Meat extends Food {
     public String getProductInformation() {
         return "Fat level - " + Float.toString(getFat()) + "\n" + "Protein level -" + Float.toString(getProtein()) + "\n" + "Weight level -" + Double.toString(getWeight());
     }
+
+    @Override
+    public void onSelect() {
+        setProtein(2,1);
+        setTaste("so taste");
+    }
+
+    @Override
+    public void eat() {
+    }
 }

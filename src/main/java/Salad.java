@@ -1,18 +1,35 @@
 public class Salad extends Food {
-    float protein;
+    private int numberOfLeaves;
+    private String colorOfLeaves;
+    private boolean ifClean;
 
-    Salad(float a, float b) {
-        super.protein = a; // обращаемся к переменной protein из класса Food
-        protein = b; // обращаемся к переменной protein из класса Salad
+
+    public Salad(int numberOfLeaves, boolean ifClean, float fat) {
+        this.numberOfLeaves = numberOfLeaves;
+        this.ifClean = ifClean;
+        setFat(fat);
     }
 
-    void show() {
-        System.out.println("i из суперкласса: " + super.protein);
-        System.out.println("i в подклассе: " + protein);
+    public Salad(int i1, String i2, boolean i3) {
     }
 
     public static void main(String args[]) {
-        Salad newSalad = new Salad(10, 20);
-        newSalad.show(a, b);
+        Salad newSalad = new Salad( 10, "green", true);
+        newSalad.show();
+    }
+
+    void show() {
+        System.out.println("колличество листьев " + numberOfLeaves);
+        System.out.println("цвет листьев " + colorOfLeaves);
+    }
+
+    @Override
+    public void onSelect() {
+        System.out.println("выбирай салат кажый день");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("салат нужно есть каждый день");
     }
 }

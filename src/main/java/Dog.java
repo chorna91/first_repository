@@ -3,6 +3,8 @@ import lombok.Data;
 
 @Data
 public class Dog extends Animals {
+    private int jump;
+
     @Override
     public void play() {
         System.out.println("Выть на луну");
@@ -12,12 +14,7 @@ public class Dog extends Animals {
     public void sleep() {
         setSpeed(0);
         setWatch(false);
-    }
-
-    private void setWatch(boolean b) {
-    }
-
-    private void setSpeed(int i) {
+        setJump(0);
     }
 
 }

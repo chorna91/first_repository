@@ -25,7 +25,7 @@ abstract class Animals {
 
     @Override
     public void sleep() {
-
+        System.out.println("Спать и мурчать");
     }
 
  }
