@@ -1,9 +1,9 @@
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.With;
 
-@Data @Setter @Getter @With
+
+@Setter
+@Getter
 public abstract class Food {
     private double weight;
     private String taste;

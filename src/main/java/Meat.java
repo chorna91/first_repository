@@ -19,7 +19,7 @@ public class Meat extends Food {
 
     @Override
     public void onSelect() {
-        setProtein(2,1);
+        setProtein(2.1f);
         setTaste("so taste");
     }
 

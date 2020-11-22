@@ -1,3 +1,8 @@
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Fish extends Food {
     private String plankton;
 
@@ -13,13 +18,13 @@ public class Fish extends Food {
 
     @Override
     public void eat() {
-        Food fish = new Fish();
-        System.out.println("Рыба есть "+ fish.getPlankton());
+        Fish fish = new Fish();
+        System.out.println("Рыба есть " + fish.getPlankton());
     }
 
     public static void main(String[] args) {
         Food fish = new Fish();
-        System.out.println("Рыба содержит в себе "+ fish.getProductInformation());
+        System.out.println("Рыба содержит в себе " + fish.getProductInformation());
     }
 
 }
