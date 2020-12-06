@@ -1,17 +1,26 @@
 import lombok.Getter;
 import lombok.Setter;
 
+import java.lang.reflect.Type;
+
 
 @Setter
 @Getter
 abstract class Animals {
-    boolean gender;
-    String family;
-    float speed;
-    byte frequency;
-    boolean watch;
+    private boolean gender;
+    private String family;
+    private float speed;
+    private byte frequency;
+    private boolean watch;
 
-    public abstract void play();
+    public Animals (){
+
+    }
+
+    interface Player{
+        public abstract void play();
+    }
+
 
     public abstract void sleep();
 
