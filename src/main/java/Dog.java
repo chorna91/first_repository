@@ -3,40 +3,31 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class Dog extends Animals implements Animals.Player {
+public class Dog extends Animals {
     private int jump;
     private Color wool;
     private Volume voice;
 
-    public Dog(int x, Volume y, Color z){
-        jump = x;
-        voice = Volume.Loud;
-        wool = Color.Ginger;
+    public Dog(int jump, Volume voice, Color wool){
+        this.jump = jump;
+        this.voice = voice;
+        this.wool = wool;
     }
 
-    enum Color {
-        Grey,
-        White,
-        Black,
-        Ginger
-    }
+    enum Color { Grey, White, Black, Ginger}
 
-    enum Volume{
-        Loud,
-        Middle,
-        Quiet
-    }
-
-    @Override
-    public void play() {
-        System.out.println("Выть на луну");
-    }
+    enum Volume{ Loud, Middle, Quiet}
 
     @Override
     public void sleep() {
         setSpeed(0);
         setWatch(false);
         setJump(0);
+    }
+
+    public static void main(String[] args) {
+        Dog yshasty = new Dog (3, Volume.Middle, Color.Black);
+        yshasty.sleep();
     }
 
 }

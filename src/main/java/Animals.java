@@ -1,12 +1,16 @@
 import lombok.Getter;
 import lombok.Setter;
 
-import java.lang.reflect.Type;
 
+interface LivingCreature {
+    void run();
+    void sleep();
+
+}
 
 @Setter
 @Getter
-abstract class Animals {
+abstract class Animals implements LivingCreature {
     private boolean gender;
     private String family;
     private float speed;
@@ -14,14 +18,12 @@ abstract class Animals {
     private boolean watch;
 
     public Animals (){
+    }
+
+    public void run() {
 
     }
 
-    interface Player{
-        public abstract void play();
-    }
-
-
-    public abstract void sleep();
+    public void sleep(){}
 
 }

@@ -4,7 +4,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class Duck extends Animals implements Animals.Player {
+public class Duck extends Animals {
     private boolean fly;
 
     public Duck (boolean a, boolean b){
@@ -13,8 +13,8 @@ public class Duck extends Animals implements Animals.Player {
     }
 
     @Override
-    public void play() {
-        System.out.println("Плавать");
+    public void run() {
+        System.out.println("Только плавать");
     }
 
     @Override

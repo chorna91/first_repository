@@ -2,25 +2,18 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-class Cat extends Animals implements Animals.Player {
+public class Cat extends Animals{
+    enum Color{
+        Green, Brown, Blue, Gray
+    }
+
     private String name;
     private Color eyes;
 
+
     public Cat (String name, Color eyes){
         this.name = name;
-        this.eyes = Color.Green;
-    }
-
-    enum Color{
-        Green,
-        Brown,
-        Blue,
-        Gray
-    }
-
-    @Override
-    public void play() {
-        System.out.println("Прыгать");
+        this.eyes = eyes;
     }
 
     @Override
@@ -28,5 +21,13 @@ class Cat extends Animals implements Animals.Player {
         setWatch(false);
         System.out.println("Спать и мурчать");
     }
+
+    public static void main(String[] args) {
+        Cat myrsik = new Cat ("Мурзик", Color.Green);
+        System.out.println(myrsik.getName());
+        System.out.println(myrsik.getEyes());
+        myrsik.sleep();
+    }
+
 
 }
